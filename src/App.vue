@@ -3,36 +3,40 @@
     <nav>
       <ul>
         <li class="nav-item">
-          <img class="logo" src="./assets/build-a-bot-logo.png" />
-          Build-a-Bot
+          <router-link class="nav-link" :to="{name: 'Home'}">
+          <img class="logo" src="./assets/build-a-bot-logo.png" />Build-a-Bot
+          </router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" :to="{name: 'Build'}">
+            Build
+          </router-link>
         </li>
       </ul>
     </nav>
   </header>
   <main>
-    <HomePage />
+    <router-view />
   </main>
 </template>
 
 <script>
-import HomePage from './components/HomePage.vue';
-
 export default {
-  name: 'App',
-  components: {
-    HomePage,
-  },
+  name: 'App'
 };
 </script>
 
 <style>
-  body {
-    background: linear-gradient(to bottom, #555, #999);
-    background-attachment: fixed;
-  }
+body {
+  background: linear-gradient(to bottom, #555, #999);
+  background-attachment: fixed;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
 }
+</style>
+
+<style scoped>
 main {
   margin: 0 auto;
   padding: 30px;
@@ -58,5 +62,13 @@ ul {
 .logo {
   vertical-align: middle;
   height: 30px;
+  margin-right: 5px;
+}
+.nav-link {
+  color: inherit;
+  text-decoration: none;
+}
+.router-link-active {
+  color: white;
 }
 </style>
