@@ -60,7 +60,7 @@ export default {
   },
   components: { CollapsibleSection, PartSelector },
   created() {
-    this.$store.dispatch('getParts');
+    this.$store.dispatch('robots/getParts');
   },
   data() {
     return {
@@ -92,7 +92,7 @@ export default {
       const cost = robot.head.cost
                 + robot.leftArm.cost + robot.torso.cost
                 + robot.rightArm.cost + robot.base.cost;
-      this.$store.dispatch('addRobotToCart', { ...robot, cost })
+      this.$store.dispatch('robots/addRobotToCart', { ...robot, cost })
         .then(() => this.$router.push('/cart'));
       this.addedToCart = true;
     }
