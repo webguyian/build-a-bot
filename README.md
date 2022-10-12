@@ -1,4 +1,5 @@
 # build-a-bot
+Application based on [Vue.js 3 Fundamentals](https://www.pluralsight.com/courses/vuejs-fundamentals) Pluralsight course.
 
 ## Project setup
 ```
